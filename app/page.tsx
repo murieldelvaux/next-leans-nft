@@ -1,10 +1,16 @@
+import Button from "./ui/components/Button/Button"
 
 
  
 export default function Page() {
+  function handleClick(){
+    console.log("click")
+  }
   return (
-    <main className="flex min-h-screen flex-col p-6">
+    <div className="dark:to-dark-background">
       <h1>page</h1>
-    </main>
+      <h1>page</h1>
+     
+    </div>
   )
 }

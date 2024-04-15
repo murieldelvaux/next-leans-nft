@@ -1,12 +1,15 @@
+import clsx from 'clsx';
 import React from 'react';
+import Button from '../ui/components/Button/Button';
 
 
 const Home: React.FC = () => {
     return (
-        <div>
-            <h1>Página Inicial</h1>
-            <p>Conteúdo da página inicial...</p>
+        <div className={clsx("dark:*")}>
+            <p>Conteúdo da página home</p>
+            <Button />
         </div>
+       
     );
 };
 
