@@ -1,6 +1,7 @@
 import "@/app/ui/global.css";
 import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
-import { ThemeProvider } from "./ui/contexts/ThemeContext";
+import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
+
 
 
 export const metadata: Metadata = {
@@ -13,8 +14,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
+
   return (
-    <ThemeProvider>{children}</ThemeProvider>
+    <ThemeProvider>
+      <>{children}</>
+    </ThemeProvider>
   );
 }

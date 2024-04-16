@@ -1,5 +1,5 @@
 'use client';
-import { useTheme } from '@/app/ui/contexts/ThemeContext';
+import { useTheme } from '@/app/contexts/ThemeContext';
 import React from 'react';
 
 const Button: React.FC = () => {
