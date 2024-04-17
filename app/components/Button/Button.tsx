@@ -1,9 +1,9 @@
 "use client";
-import React, { Fragment } from "react";
+import React from "react";
 import { ButtonProps } from "./Button.types";
 import clsx from "clsx";
 
-const Button: React.FC = ({
+export const Button = ({
   buttonContent,
   icon,
   text,
@@ -25,9 +25,7 @@ const Button: React.FC = ({
     >
       <div className="flex items-center space-x-2">
         {(buttonContent === "iconOnly" || buttonContent === "textAndIcon") && (
-          <Fragment>
-            <p>icone</p>
-          </Fragment>
+          <>{icon}</>
         )}
         {buttonContent !== "iconOnly" && (
           <p className="font-montserrat font-semibold text-base">
@@ -39,4 +37,4 @@ const Button: React.FC = ({
   );
 };
 
-export default Button;
+

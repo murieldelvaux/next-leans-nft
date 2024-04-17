@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import Reac from "react";
 
 export type ButtonProps = {
   buttonContent?: "default" | "textAndIcon" | "iconOnly";

@@ -1,4 +1,5 @@
-import Button from "./components/Button/Button";
+import { Button } from "./components/Button/Button";
+import { CameraIcon } from "./components/Icons/CameraIcon";
 
 export default function Page() {
   return (
@@ -15,11 +16,13 @@ export default function Page() {
         text="start wallet"
         colorType="transparent"
         buttonContent="textAndIcon"
+        icon={<CameraIcon width="20px" height="20px"/>}
       />
       <Button
         text="start wallet"
         colorType="transparent"
         buttonContent="iconOnly"
+        icon={<CameraIcon width="20px" height="20px"/>}
       />
     </div>
   );
