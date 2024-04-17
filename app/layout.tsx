@@ -1,7 +1,6 @@
-import "@/app/ui/global.css";
+import "@/app/global.css";
 import { Metadata } from "next/dist/lib/metadata/types/metadata-interface";
-import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
-
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export default function RootLayout({
 
   return (
     <ThemeProvider>
-      <>{children}</>
+      {children}
     </ThemeProvider>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import Button from '../components/Button/Button';
+import {Montserrat} from 'next/font/google'
 import clsx from 'clsx';
 
 type Theme = 'light' | 'dark';
@@ -8,6 +8,12 @@ type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
+
+const montserrat = Montserrat({
+  style:['normal'],
+  weight:['400', '500', '600', '700'],
+  subsets:['latin']
+})
 
 const ThemeContext = createContext<ThemeContextType>({theme: 'dark',toggleTheme() {},});
 
@@ -20,8 +26,10 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   console.log(theme)
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <html lang="en" >
-        <body className={theme==="dark"?clsx(`bg-dark-bg-dark`):clsx(`bg-light-bg-light`)}><div>{children}<Button /></div></body>
+        <html lang="en">
+          <body className={theme==="dark"?clsx(`bg-dark-bg-dark ${montserrat.className}`):clsx(`bg-light-bg-light ${montserrat.className}`)}>
+            <div>{children}</div>
+          </body>
         </html> 
     </ThemeContext.Provider>
   );
