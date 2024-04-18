@@ -1,5 +1,6 @@
 import { Button } from "./components/Button/Button";
 import { CameraIcon } from "./components/Icons/CameraIcon";
+import { LeansLogo } from "./components/Logo/LeansLogo";
 
 export default function Page() {
   return (
@@ -30,6 +31,7 @@ export default function Page() {
         icon={<CameraIcon width="20px" height="20px" />}
         fullWidth
       />
+      <LeansLogo />
     </div>
   );
 }

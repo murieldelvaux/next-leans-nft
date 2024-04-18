@@ -3,16 +3,16 @@ import React, { SVGProps } from "react";
 
 export const CameraIcon = ({ ...props }: SVGProps<SVGSVGElement>) => {
   return (
-    <svg width={props.width ?? "20"}
-      height={props.height ?? "20"}
+    <svg width={props.width ?? "20px"}
+      height={props.height ?? "20px"}
       viewBox={props.viewBox ?? "0 0 20 20"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <rect
-        width={props.width}
-        height={props.height}
+        width={props.width ?? "20px"}
+        height={props.height ?? "20px"}
         fill="url(#pattern0_92_13)"
       />
       <defs>
