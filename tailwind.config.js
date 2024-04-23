@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
-        
+      },
+      height: {
+        '448':'28rem'
       },
       colors: {
         light: {
@@ -16,6 +18,8 @@ module.exports = {
           primary: '#007bff',
           secondary: '#6c757d',
           text: '#212529',
+          card: '#F8F5FF',
+          purple: '#7851EC', 
         },
         dark: {
           'bg-dark': '#0F0F11',
